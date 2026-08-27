@@ -1,0 +1,14 @@
+body {background-color: darkred;}
+h1 {
+    color: aquamarine;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+h2 {
+    color: aqua;
+    margin: auto;
+}
+h3 {color: aliceblue;}
+p {
+    color: blanchedalmond;
+    font-size: 17px;
+}
