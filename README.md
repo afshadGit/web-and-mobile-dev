@@ -2,4 +2,4 @@
 
 Semester coursework for Web and Mobile Dev.
 
-🔗 Live site: https://web-and-mobile-dev-zeta.vercel.app/
+Link to landing page index: https://web-and-mobile-dev-zeta.vercel.app/
