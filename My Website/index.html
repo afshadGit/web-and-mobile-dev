@@ -4,17 +4,18 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Portfolio 2.0</title>
-        <style>
+        <link rel="stylesheet" href="style.css">
+        <!-- <style>
             /* Base Reset */
             * { box-sizing: border-box; margin: 0; padding: 0; }
-            body { font-family: system-ui, sans-serif; background: #f4f4f6; color: #333; line-height: 1.6; }
+            body { font-family: system-ui, sans-serif; background: #FFFFF0; color: #333; line-height: 1.6; }
 
             /* Typography & Spacing helpers */
             header, nav, main, aside, footer, article { padding: 20px; border-radius: 8px; margin-bottom: 15px; }
 
             /* 1. Header & Navigation */
-            header { background: #1e293b; color: white; text-align: center; }
-            nav { background: #3b82f6; display: flex; gap: 20px; justify-content: center; }
+            header { background: #650000; color: white; text-align: center; }
+            nav { background: #650000; display: flex; gap: 20px; justify-content: center; }
             nav a { color: white; text-decoration: none; font-weight: bold; }
             nav a:hover { text-decoration: underline; font-weight: lighter; }
 
@@ -30,14 +31,14 @@
             }
 
             /* 3. Main Content Area (Takes 3x space) */
-            main { background: white; flex: 3; box-shadow: 0 2px 4px rgba(0,0,0,0.05); }
-            article { background: #f8fafc; border: 1px solid #e2e8f0; }
+            main { background: #FFFDD0; flex: 3; box-shadow: 0 2px 4px rgba(0,0,0,0.05); }
+            article { background: #FFFFF0; border: 1px solid #e2e8f0; }
 
             /* 4. Sidebar Area (Takes 1x space) */
-            aside { background: #e2e8f0; flex: 1; height: fit-content; }
+            aside { background: #FFFDD0; flex: 1; height: fit-content; }
 
             /* 5. Footer */
-            footer { background: #1e293b; color: white; text-align: center; margin-bottom: 0; }
+            footer { background: #5C4033; color: white; text-align: center; margin-bottom: 0; }
 
             /* 6. Responsive Breakdown for Mobile Devices */
             @media (max-width: 768px) {
@@ -45,7 +46,7 @@
                     flex-direction: column; /* Stacks sidebar under content on mobile */
                 }
             }
-        </style>
+        </style> -->
     </head>
 
     <body>
@@ -57,10 +58,10 @@
 
         <!-- Main Navigation Bar -->
         <nav>
-            <a href="#">Home</a>
-            <a href="#">Projects</a>
-            <a href="#">Demos</a>
-            <a href="#">Contact</a>
+            <a href="index.html">Home</a>
+            <a href="projects.html">Projects</a>
+            <a href="demos.html">Demos</a>
+            <a href="contact.html">Contact</a>
         </nav>
 
         <!-- Layout container -->
@@ -69,18 +70,34 @@
             <!-- Primary page content -->
             <main>
                 <h2>Latest news!</h2>
-                <p>Here's what I'm up to!</p>
+                <p>Here's what I've been up to!</p>
 
                 <article>
-                    <h3>Article</h3>
-                    <p>This is a sub-container article; holds independent posts/widgets</p>
+                    <h3>I am entering Senior Year at university!</h3>
+                    <p>
+                        <img src="assets/IMG_6689.jpeg" alt="Ikramah, Azfar and I in Web and Mobile Dev class" style="width:100%">
+                        <br>
+                        All good things come to an end, and so do the bad ones (i'm kidding i love university). University wraps up by the end of next summer and (hopefully) I'll be graduating and entering the dystopian corporate world!
+                    </p>
+                </article>
+                <article>
+                    <h3>My Summer STRP: PPAGE</h3>
+                    <p>
+                        This summer my team and I built a Multi-Agent Reinforcement Learning (MARL) testbed for undergraduate students and researchers, called Predator-Prey Archetype Gridworld Environment (PPAGE). Now, conference and journal submissions await, and I'm hoping for a publication. Read more about it at its <a href="https://github.com/UHUMALAB/PPAGE">GitHub</a> link! 
+                    </p>
                 </article>
             </main>
 
             <!-- Sidebar section -->
             <aside>
-                <h3>Sidebar</h3>
-                <p>Related links</p>
+                <h3>Interested more in what I do?</h3>
+                <p>
+                    Related links:
+                    <br>
+                    <a href="https://www.linkedin.com/in/afshad-sidhwa-152950245/">Connect with me on LinkedIn!</a>
+                    <br>
+                    <a href="https://github.com/afshadGit/">Go through my GitHub!</a>
+                </p>
             </aside>
 
         </div>

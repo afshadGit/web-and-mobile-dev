@@ -1,0 +1,149 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>JavaScript Control Structures</title>
+</head>
+<body>
+    <h1>JavaScript Control Structures</h1>
+    <div>
+        <h2>1. if / else</h2>
+        <script>
+            let age = 18;
+            if (age >= 18) {
+                document.write("<p>You are eligible to vote.</p>");
+            } else {
+                document.write("<p>You are not eligible to vote.</p>");
+            }
+        </script>
+    </div>
+
+    <div>
+        <h4>e.g; if age >= 20 and grade=A, then pass, else fail</h2>
+        <script>
+            let student_age=20;
+            let student_grade="A";
+            if (student_age >=20 && student_grade) {
+                document.write("<p>Pass</p>")
+            } else {
+                document.write("<p>Fail</p>")
+            }
+        </script>
+    </div>
+
+    <div>
+        <h2>2. switch</h2>
+        <script>
+            let day = 3;
+            let dayName;
+
+            switch (day) {
+                case 1:
+                    dayName = "Monday";
+                    break;
+                case 2:
+                    dayName = "Tuesday";
+                    break;
+                case 3:
+                    dayName = "Wednesday";
+                    break;
+                default:
+                    dayName = "Another day";
+            }
+
+            document.write("<p>Day " + day + " is " + dayName + ".</p>");
+        </script>
+    </div>
+
+    <div>
+        <h4>e.g; switch - class=370 and day=Thursday, show "WebDev class on Thursday", otherwise "Some other class"</h2>
+        <script>
+            let class_code=370;
+            let weekday="Thursday";
+            let class_r;
+            switch (weekday) {
+                case "Thursday":
+                    if (class_code === 370) {
+                        class_r = "WebDev class on Thursday"
+                    } else {
+                        class_r = "Some other class"
+                    }
+            }
+
+            document.write("<p>" + class_r + "</p>")
+        </script>
+    </div>
+
+    <div>
+        <h2>3. for loop</h2>
+        <script>
+            document.write("<p>Numbers from 1 to 5: ");
+            for (let i = 1; i <= 5; i++) {
+                document.write(i + " ");
+            }
+            document.write("</p>");
+        </script>
+    </div>
+
+    <div>
+        <h4>e.g 1; create a multiplication table for 11:</h4>
+        <script>
+            for (let i = 1; i<=12; i++) {
+                document.write("<p>11 * " + i + " = " + i*11 + "<br></p>")
+            }
+        </script>
+    </div>
+
+    <div>
+        <h4>e.g 2; iterate through array of names: ["afshad", "ikramah", ...]</h4>
+        <script>
+            const names = ["afshad", "ikramah", "azfar", "moiz"];
+            for (const name of names) {
+                document.write("<p>" + name + " </p>")
+            }
+        </script>
+    </div>
+
+    <div>
+        <h2>4. while loop</h2>
+        <script>
+            let count = 1;
+            document.write("<p>");
+            while (count <= 5) {
+                document.write(count + " ");
+                count++;
+            }
+            document.write("</p>");
+        </script>
+    </div>
+
+    <div>
+        <h2>5. break</h2>
+        <script>
+            document.write("<p>");
+            for (let i = 1; i <= 10; i++) {
+                if (i === 6) {
+                    break;
+                }
+                document.write(i + " ");
+            }
+            document.write("</p>");
+        </script>
+    </div>
+
+    <div>
+        <h2>6. continue</h2>
+        <script>
+            document.write("<p>");
+            for (let i = 1; i <= 6; i++) {
+                if (i === 3) {
+                    continue;
+                }
+                document.write(i + " ");
+            }
+            document.write("</p>");
+        </script>
+    </div>
+</body>
+
+</html>

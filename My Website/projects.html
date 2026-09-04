@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Projects</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <!-- Top banner header -->
+    <header>
+        <h1>Welcome to my new portfolio website!</h1>
+    </header>
+
+    <!-- Main Navigation Bar -->
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="projects.html">Projects</a>
+        <a href="demos.html">Demos</a>
+        <a href="contact.html">Contact</a>
+    </nav>
+
+    <div class="layout-wrapper">
+        <main>
+            <h2>Here's some of the projects I worked on:</h2>
+
+            <article>
+                <h3>Predator-Prey Archetype Gridworld Environment (PPAGE)</h3>
+                <p>
+                    <img src="assets/thumbnail.png" alt="Thumbnail for PPAGE repo video" style="width:100%">
+                    <br>
+                    A deterministic, modular, research-grade multi-agent predator–prey environment for studying coordination, pursuit–evasion, and emergent behavior in Multi-Agent Reinforcement Learning. A controlled experimental laboratory with fully inspectable dynamics, pluggable perception and incentives, and reproducibility.
+                </p>
+                <ul>
+                    <li>
+                        Became a top contributor to this open-source, PyPI-packaged multi-agent RL testbed (Apache-2.0)
+                    </li>
+                    <li>
+                        Built PyTorch MARL baselines from scratch: DQN (Double/Dueling), Actor-Critic, A2C, A3C (async "Hogwild"), and a MixedTrainer for per-team algorithm asymmetry. Designed JAL-GT, a correlated Q-learning baseline solving a per-timestep correlated-equilibrium LP
+                    </li>
+                    <li>
+                        Codebase (~81% test coverage) now being scoped for AAMAS/EAAI and JOSS submission
+                    </li>
+                </ul>
+                <p>
+                    <b>Interested?</b> <i>Find the link to the repo <a href="https://github.com/UHUMALAB/PPAGE">here</a>!</i>
+                </p>
+            </article>
+
+            <article>
+                <h3>Implementing Hybrid Genetic Algos (HGAs) to solve the Colored-Travelling Salesman Problem (CTSP)</h3>
+                <p>
+                    <img src="assets/hga-ctsp.jpg" alt="Thumbnail for CTSP solved via HGAs project" style="width:100%">
+                    <br>
+                </p>
+                <ul>
+                    <li>
+                        Built a complete five-component evolutionary pipeline from scratch—incorporating path-guided initialization, edge assembly crossover, mutation, and neighbourhood search—reproducing the Lin & Li (2025) framework for the Colored Traveling Salesman Problem (CTSP).
+                    </li>
+                    <li>
+                        Applied the algorithm to a real dataset of Pakistani fuel stations (Shell, Total/PARCO, PSO) to resolve path duplication caused by rigid corporate boundaries, achieving an 11.5% distance reduction (10,114.1 km), even under strict single-brand constraints.
+                    </li>
+                    <li>
+                        Modeled a "Collaborative Shared-Hub Logistics" strategy that treated competing stations within 15 km as shared delivery hubs, slashing total transit distance down to 9,137.7 km, and unlocking a 20.0% total optimization over the baseline.
+                    </li>
+                </ul>
+                <p>
+                    <i>Find this project on <a href="https://github.com/ikramahelahi/PakFuel-HybridGA">GitHub</a>! Or, see my project partner Ikramah's post about it on <a href="https://lnkd.in/p/dNp8Dv9B">LinkedIn</a>.</i>
+                </p>
+            </article>
+
+            <article>
+                <h3>Skillboard</h3>
+                <p>
+                    <img src="assets/skillboard.png" alt="A screenshot of me and Adeenah's time wrapping up the project at our internship" style="width: 100%;">
+                    <br>
+                </p>
+                    <ul>
+                        <li>
+                            Designed and built SkillBoard, a full-stack workforce intelligence platform for skill-based task allocation, preventing employee burnout through real-time workload tracking and capacity management
+                        </li>
+                        <li>
+                            Engineered a FastAPI & Python backend with MS SQL Server to manage project tasks and dynamic workloads
+                        </li>
+                        <li>
+                            Transitioned architecture from role-based to skill-based logic, expanding into full-stack development through mentorship
+                        </li>
+                    </ul>
+            </article>
+        </main>
+    </div>
+</body>
+</html>
