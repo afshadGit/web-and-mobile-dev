@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<body>
+    <h1>JavaScript - the try ... catch statements</h1>
+    <h2></h2>
+
+    <p id="demo"></p>
+
+    <p>Try and catch adddlert and alert functions:</p>
+    <script>
+        try {
+            adddlert("Welcome guest!"); // returns adddlert is not defined
+            // alert("Welcome guest!"); // popup alert in code window saying Welcome guest
+        } catch (err) {
+            // document.getElementById("demo").innerHTML = err.message;
+            console.log(err.message); // logs error to console
+        }
+    </script>
+
+</body>
+</html>
+

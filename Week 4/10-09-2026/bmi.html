@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>BMI Calculator</title>
+</head>
+<body>
+    <h1>Simple BMI Calculator</h1>
+    <p>Task: Develop a simple BMI calculator that takes weight (kg) and height(m) as inputs, and upon pressing calculate BMI button, displays value along with a correct range.</p>
+
+    <input id="weight" type="number" />
+    <input id="height" type="number" />
+    <br><br>
+    <button id="bmiBtn">Calculate BMI</button>
+    <br>
+    <p id="result">Result will appear here</p>
+    <p id="range">BMI range:</p>
+
+    <script>
+        const weightInput = document.getElementById("weight");
+        const heightInput = document.getElementById("height");
+        const resultElement = document.getElementById("result");
+        const rangeElement = document.getElementById("range");
+
+        const calcBMI = function (w, h) {
+            if (
+                !Number.isFinite(w) ||
+                !Number.isFinite(h) ||
+                w <= 0 ||
+                h <= 0
+            ) {
+                throw new Error("Please enter positive numbers");
+            }
+            const result = w / (h * h);
+            return result;
+        };
+        
+        document.getElementById("bmiBtn").addEventListener("click", () => {
+            const weight = Number(weightInput.value);
+            const height = Number(heightInput.value);
+
+            try {
+                const result = calcBMI(weight, height);
+                resultElement.textContent = `BMI: ${result.toFixed(2)}`;
+                
+                if (result < 18.5) {
+                    rangeElement.textContent = `Below 18.5 -> underweight`;
+                } else if (result >= 18.5 && result <= 24.9) {
+                    rangeElement.textContent = `Between 18.5 and 24.9 -> healthy/normal weight`;
+                } else if (result >= 25 && result <= 29.9) {
+                    rangeElement.textContent = `Between 25 and 29.9 -> overweight`;
+                } else if (result >=30) {
+                    rangeElement.textContent = `30.0 and above -> obese`;
+                }
+            } catch (error) {
+                resultElement.textContent = error.message;
+                rangeElement.textContent = "BMI range:";
+            }
+
+        });
+    </script>
+</body>
+</html>

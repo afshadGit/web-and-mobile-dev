@@ -1,0 +1,99 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JS Callback Functions</title>
+  </head>
+  <body>
+    <h1>Examples of simple and callback functions in JavaScript</h1>
+    <p>Open the browser console to see the outputs.</p>
+
+    <input id="firstNumber" type="number" />
+    <input id="secondNumber" type="number" />
+    <br><br>
+    <button id="addBtn">Add</button>
+    <button id="subBtn">Subtract</button>
+    <button id="multiplyBtn">Multiply</button>
+    <button id="divideBtn">Divide</button>
+    <br>
+    <p id="result">Result will appear here</p>
+
+    <script>
+        const add = function (a, b) {
+            try {
+                return a + b;
+            } catch (error) {
+                console.error("Addition failed: ", error.message);
+            }
+        };
+
+        const sub = function (a, b) {
+            try {
+                return a - b;
+            } catch (error) {
+                console.error("Subtraction failed: ", error.message);
+            }
+        };
+
+        const multiply = function (a, b) {
+            try {
+                return a * b;
+            } catch (error) {
+                console.error("Multiplication failed: ", error.message);
+            }
+        };
+
+        const divide = function (a, b) {
+            try {
+                if (b === 0) {
+                throw new Error("Cannot divide by zero");
+                } else {
+                return a / b;
+                }
+            } catch (error) {
+                console.error("Division failed: ", error.message);
+                throw error;
+            }
+        };
+
+        // Assignment: using expression, arrow and rest params fn, create a calculator function using add, subtract, multiply and divide and calling all the pre-existing functions. Output in console.
+        const calculate = (operation) => {
+            const firstNumber = Number(
+                document.getElementById("firstNumber").value,
+            );
+            const secondNumber = Number(
+                document.getElementById("secondNumber").value,
+            );
+            const resultElement = document.getElementById("result");
+
+            try {
+                if (Number.isNaN(firstNumber) || Number.isNaN(secondNumber)) {
+                    throw new Error("Please enter two numbers");
+                }
+
+                const result = operation(firstNumber, secondNumber);
+                resultElement.textContent = `Result: ${result}`;
+            } catch (error) {
+                resultElement.textContent = error.message;
+            }
+        };
+
+        document.getElementById("addBtn").addEventListener("click", () => {
+            calculate(add);
+        });
+
+        document.getElementById("subBtn").addEventListener("click", () => {
+            calculate(sub);
+        });
+
+        document.getElementById("multiplyBtn").addEventListener("click", () => {
+            calculate(multiply);
+        });
+
+        document.getElementById("divideBtn").addEventListener("click", () => {
+            calculate(divide);
+        });
+    </script>
+</body>
+</html>
