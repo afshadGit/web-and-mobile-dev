@@ -1,0 +1,8 @@
+{
+  "name": "web-and-mobile-dev-site",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "build": "node build-site.mjs"
+  }
+}
