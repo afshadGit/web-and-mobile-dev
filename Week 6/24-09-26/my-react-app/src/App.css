@@ -1,0 +1,13 @@
+h1 {
+  color: #333;
+}
+
+h2 {
+  max-width: 800px;
+  margin: 24px auto;
+  line-height: 1.5;
+}
+
+em {
+  color: #8b4513;
+}
