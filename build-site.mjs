@@ -22,6 +22,7 @@ const apps = [
   "Week 6/24-09-26/my-react-app",
   "Week 7/my-react-app-props",
   "Week 7/profile-cards",
+  "Week 9/react-bmi-assignment",
 ];
 
 rmSync(output, { recursive: true, force: true });

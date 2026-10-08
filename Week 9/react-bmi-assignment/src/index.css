@@ -1,0 +1,95 @@
+:root {
+  --bg: #f4f1ea;
+  --surface: #fffdf8;
+  --text: #263238;
+  --muted: #68747b;
+  --accent: #d96c4f;
+  --accent-dark: #a94532;
+  --border: #ded8ce;
+
+  font-family: "Comic Sans MS", "Comic Sans", cursive;
+  color: var(--text);
+  background: var(--bg);
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+}
+
+#root {
+  min-height: 100vh;
+}
+
+.app-shell {
+  width: min(680px, calc(100% - 32px));
+  margin: 0 auto;
+  padding: 64px 0;
+}
+
+.app-header {
+  margin-bottom: 32px;
+}
+
+.app-header h1 {
+  margin: 8px 0;
+  font-size: clamp(2.4rem, 8vw, 4.5rem);
+  line-height: 1;
+}
+
+.app-header p {
+  color: var(--muted);
+}
+
+.eyebrow {
+  color: var(--accent) !important;
+  font: 700 0.75rem/1 sans-serif;
+  letter-spacing: 0.12em;
+}
+
+.bmi-form,
+.bmi-result {
+  padding: 24px;
+  border: 1px solid var(--border);
+  background: var(--surface);
+  box-shadow: 0 12px 30px rgba(55, 45, 35, 0.08);
+}
+
+.bmi-form {
+  display: grid;
+  gap: 16px;
+}
+
+.bmi-form label {
+  display: grid;
+  gap: 6px;
+  font-weight: 700;
+}
+
+.bmi-form input,
+.bmi-form select,
+.bmi-form button {
+  font: inherit;
+  padding: 11px 12px;
+  border: 1px solid var(--border);
+  border-radius: 5px;
+}
+
+.bmi-form button[type="submit"] {
+  color: white;
+  background: var(--accent);
+  border-color: var(--accent);
+}
+
+.bmi-form button[type="button"] {
+  background: transparent;
+}
+
+.bmi-result {
+  margin-top: 20px;
+}
+
+.error {
+  color: #b42318;
+  font-weight: 700;
+}
